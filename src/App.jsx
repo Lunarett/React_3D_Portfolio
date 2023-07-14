@@ -1,9 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Experience, Feedbacaks, Hero, Navbar, Works, StarsCanvas } from './components';
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Works, StarsCanvas } from './components';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <BrowserRouter>
       <div>Hello World</div>
