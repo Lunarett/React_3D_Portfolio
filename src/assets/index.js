@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
+import backend from "./game.png";
 import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import mobile from "./react.png";
+import web from "./ux-design.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -29,6 +29,13 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import sc_logo from './SC_Logo.png';
+import si_logo from './SI_Logo.png';
+
+import bgLayer1 from './bg/bg1_layer0.png';
+import bgLayer2 from './bg/bg1_layer1.png';
+import bgLayer3 from './bg/bg1_layer2.png';
+import bgLayer4 from './bg/bg1_layer3.png';
 
 export {
   logo,
@@ -59,4 +66,10 @@ export {
   carrent,
   jobit,
   tripguide,
+  sc_logo,
+  si_logo,
+  bgLayer1,
+  bgLayer2,
+  bgLayer3,
+  bgLayer4,
 };
