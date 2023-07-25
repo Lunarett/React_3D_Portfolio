@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -10,6 +10,8 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,21 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const sectionElement = document.querySelector(hash);
+      if (sectionElement) {
+        sectionElement.scrollIntoView();
+      }
+    }
+  }, [location]);
+
+  const handleLinkClick = (nav) => {
+    setActive(nav.title);
+    navigate(`/${nav.page}`, { state: { hash: nav.id } });
+  };
+
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-50 backdrop-blur shadow-lg text-ltc-font-1 dark:text-dtc-font-1 ${scrolled ? "bg-ltc-2 dark:bg-dtc-2 " : "bg-ltc-2/40 dark:bg-dtc-2/40"}`}
@@ -37,9 +54,9 @@ const Navbar = () => {
               key={nav.id}
               className={`${active === nav.title ? "text-eBlue" : "text-secondary"
                 } hover:text-eBlue text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleLinkClick(nav)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.title}
             </li>
           ))}
 
@@ -66,10 +83,10 @@ const Navbar = () => {
                     }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
+                    handleLinkClick(nav);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {nav.title}
                 </li>
               ))}
             </ul>
