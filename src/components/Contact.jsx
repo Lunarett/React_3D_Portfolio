@@ -70,7 +70,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-tertiary shadow-2xl p-8 rounded-2xl'
+        className='flex-[0.75] bg-ltc-3 dark:bg-dtc-3 shadow-2xl p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -81,42 +81,42 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-secondary font-medium mb-4'>Your Name</span>
+            <span className='text-ltc-font-2 dark:text-dtc-font-2 font-medium mb-4'>Your Name</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="Name..."
-              className='bg-white py-4 px-6 placeholder:text-grey-100 text-secondary rounded-lg outline-none border-none font-extraLight'
+              className='bg-ltc-5 dark:bg-dtc-5 py-4 px-6 placeholder:text-grey-100 text-ltc-font-2 dark:text-dtc-font-2 rounded-lg outline-none border-none font-extraLight'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-secondary font-medium mb-4'>Your email</span>
+            <span className='text-ltc-font-2 dark:text-dtc-font-2 font-medium mb-4'>Your email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="Email address..."
-              className='bg-white py-4 px-6 placeholder:grey-100 text-secondary rounded-lg outline-none border-none font-extraLight'
+              className='bg-ltc-5 dark:bg-dtc-5 py-4 px-6 placeholder:grey-100 text-ltc-font-2 dark:text-dtc-font-2 rounded-lg outline-none border-none font-extraLight'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-secondary font-medium mb-4'>Your Message</span>
+            <span className='text-ltc-font-2 dark:text-dtc-font-2 font-medium mb-4'>Your Message</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-white py-4 px-6 placeholder:grey-100 text-secondary rounded-lg outline-none border-none font-extraLight'
+              className='bg-ltc-5 dark:bg-dtc-5 py-4 px-6 placeholder:grey-100 text-ltc-font-2 dark:text-dtc-font-2 rounded-lg outline-none border-none font-extraLight'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-white py-3 px-8 rounded-xl outline-none w-fit text-secondary font-extraLight shadow-md shadow-black/10'
+            className='bg-ltc-font-3  py-3 px-8 rounded-xl outline-none w-fit text-dtc-font-2 font-extraLight shadow-md shadow-black/10'
           >
             {loading ? "Sending..." : "Send"}
           </button>

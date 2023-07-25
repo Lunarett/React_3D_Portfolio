@@ -1,24 +1,22 @@
-import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import React, { useEffect } from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { color, motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { useTheme } from './ThemeProvider';
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, theme }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#d3dfe9",
-        color: "#000",
+        background: theme === 'dark' ? `${styles.darkThemeColor2}` : `${styles.lightThemeColor2}`,
+        color: theme === 'dark' ? `${styles.darkFontColor1}` : `${styles.lightFontColor1}`,
         boxShadow: "10px 15px -3px rgba(0, 0, 0, 0.15)",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #d3dfe9" }}
+      contentArrowStyle={{ borderRight: theme === 'dark' ? `7px solid ${styles.darkThemeColor2}` : `7px solid ${styles.lightThemeColor2}` }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg, border: "4px solid #414954", boxShadow: "none" }}
       icon={
@@ -37,11 +35,11 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className="text-font-color-1 text-[24px] font-extralight">
+        <h3 className="text-ltc-font-1 dark:text-dtc-font-1 text-[24px] font-extralight">
           {experience.title}
         </h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-ltc-font-2 dark:text-dtc-font-2 text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -52,7 +50,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-secondary text-[14px] pl-1 tracking-wider"
+            className="text-ltc-font-2 dark:text-dtc-font-2 text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
@@ -63,6 +61,8 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -80,6 +80,7 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              theme={theme}
             />
           ))}
         </VerticalTimeline>

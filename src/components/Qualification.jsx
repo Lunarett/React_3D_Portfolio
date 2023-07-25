@@ -9,37 +9,37 @@ import { styles } from "../styles";
 import { qualifications } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { useTheme } from './ThemeProvider';
 
-const QualificationCard = ({ qualification }) => {
+const QualificationCard = ({ qualification, theme }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#d3dfe9",
-        color: "#000",
+        background: theme === 'dark' ? `${styles.darkThemeColor2}` : `${styles.lightThemeColor2}`,
+        color: theme === 'dark' ? `${styles.darkFontColor1}` : '#000',
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #d3dfe9" }}
+      contentArrowStyle={{ borderRight: theme === 'dark' ? `7px solid ${styles.darkThemeColor2}` : `7px solid ${styles.lightThemeColor2}` }}
       date={qualification.date}
-      iconStyle={{ background: "#414954", border: "4px solid #d3dfe9", boxShadow: "none" }}
+      iconStyle={{ background: "#414954", border: theme === 'dark' ? `4px solid ${styles.darkThemeColor2}` : `4px solid ${styles.lightThemeColor2}`, boxShadow: "none" }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
-          {/* If you have an icon for qualifications, you can place it here */}
-          {/* For example: <img src={qualification.icon} alt={qualification.name} className="w-[90%] h-[90%] object-contain" /> */}
+          <img src={qualification.icon} alt={qualification.name} className="w-[90%] h-[90%] object-contain rounded-3xl" />
         </div>
       }
       className="vertical-timeline-element--education"
     >
       <div>
-        <h3 className="text-font-color-1 text-[24px] font-extralight">
+        <h3 className="text-ltc-font-1 dark:text-dtc-font-1 text-[24px] font-extralight">
           {qualification.course}
         </h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-ltc-font-2 dark:text-dtc-font-2 text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {qualification.name}
         </p>
         <p
-          className="text-secondary text-[14px] font-semibold"
+          className="text-ltc-font-2 dark:text-dtc-font-2 text-[14px] font-semibold"
           style={{ margin: 0 }}
         >
           {qualification.qualification}
@@ -50,6 +50,8 @@ const QualificationCard = ({ qualification }) => {
 };
 
 const Qualification = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -67,6 +69,7 @@ const Qualification = () => {
             <QualificationCard
               key={`qualification-${index}`}
               qualification={qualification}
+              theme={theme}
             />
           ))}
         </VerticalTimeline>

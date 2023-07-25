@@ -7,6 +7,8 @@ import Experience from './Experience';
 import Qualification from './Qualification';
 import Contact from './Contact';
 import ParticleEffect from './ParticleEffect';
+import ThemeToggle from './ThemeToggle';
+import { ThemeProvider } from './ThemeProvider';
 
 export {
   Hero,
@@ -21,4 +23,6 @@ export {
   ComputersCanvas,
   StarsCanvas,
   ParticleEffect,
+  ThemeToggle,
+  ThemeProvider,
 }

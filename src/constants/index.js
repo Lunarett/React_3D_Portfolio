@@ -1,30 +1,30 @@
 import {
-    mobile,
-    backend,
-    creator,
-    web,
+    // Tech
+    c,
+    cpp,
+    cs,
+    unity,
+    ue,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
-    mongodb,
     git,
     figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
+
+    // Services
+    uiDesign,
+    reactDev,
+    gameDev,
+
+    // Experience and Qualification Logos
     sc_logo,
     si_logo,
+    ms_logo,
+    sae_logo,
 } from "../assets";
 
 export const navLinks = [
@@ -49,19 +49,39 @@ export const navLinks = [
 const services = [
     {
         title: "Web Designer",
-        icon: web,
+        icon: uiDesign,
     },
     {
         title: "React.js Developer",
-        icon: mobile,
+        icon: reactDev,
     },
     {
         title: "Game Developer",
-        icon: backend,
+        icon: gameDev,
     },
 ];
 
 const technologies = [
+    {
+        name: "C",
+        icon: c,
+    },
+    {
+        name: "C++",
+        icon: cpp,
+    },
+    {
+        name: "C Sharp",
+        icon: cs,
+    },
+    {
+        name: "Unity",
+        icon: unity,
+    },
+    {
+        name: "Unreal Engine",
+        icon: ue,
+    },
     {
         name: "HTML 5",
         icon: html,
@@ -132,14 +152,14 @@ const qualifications = [
         course: "Games Programming",
         qualification: "Diploma",
         name: "SAE Institute",
-        icon: {},
+        icon: sae_logo,
         date: "2021 - 2022"
     },
     {
         course: "Audio Engineering",
         qualification: "Bachelors of Arts",
         name: "Middlesex & SAE Institute",
-        icon: {},
+        icon: ms_logo,
         date: "2016 - 2021"
     }
 ]
@@ -163,7 +183,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
+        image: {},
         source_code_link: "https://github.com/",
     },
     {
@@ -184,7 +204,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
+        image: {},
         source_code_link: "https://github.com/",
     },
     {
@@ -205,7 +225,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
+        image: {},
         source_code_link: "https://github.com/",
     },
 ];

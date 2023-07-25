@@ -2,17 +2,29 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: "#edf5f7",
-        secondary: "#414954",
-        tertiary: "#d3dfe9",
-        "eBlue": "#15a3e6",
-        "font-color-1": "#5f6365",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        //Light Theme Colors
+        "ltc-1": "#edf5f7",
+        "ltc-2": "#eef3f5",
+        "ltc-3": "#d3dfe9",
+        "ltc-4": "#e3eaef",
+        "ltc-5": "#e3eaef",
+        "ltc-font-1": "#2a2d2e",
+        "ltc-font-2": "#414954",
+        "ltc-font-3": "#2281c0",
+
+        // Dark Theme Colors
+        "dtc-1": "#1a1e21",
+        "dtc-2": "#464f60",
+        "dtc-3": "#121416",
+        "dtc-4": "#15181c",
+        "dtc-5": "#15181c",
+        "dtc-font-1": "#edf5f7",
+        "dtc-font-2": "#edf5f7",
+        "dtc-font-3": "#2281c0",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
@@ -23,10 +35,6 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg1.png')",
-        "layer1": "url('/src/assets/bg/bg1_layer0.png')",
-        "layer2": "url('/src/assets/bg/bg1_layer1.png')",
-        "layer3": "url('/src/assets/bg/bg1_layer2.png')",
-        "layer4": "url('/src/assets/bg/bg1_layer3.png')",
       },
     },
   },

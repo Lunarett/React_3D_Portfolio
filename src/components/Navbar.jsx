@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets";
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -27,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-50 backdrop-blur shadow-lg ${scrolled ? "bg-primary" : "bg-primary bg-opacity-40"}`}
+      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-50 backdrop-blur shadow-lg text-ltc-font-1 dark:text-dtc-font-1 ${scrolled ? "bg-ltc-2 dark:bg-dtc-2 " : "bg-ltc-2/40 dark:bg-dtc-2/40"}`}
     >
       <div className='w-full flex justify-end items-center max-w-7xl mx-auto'>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -41,6 +42,8 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+
+          <ThemeToggle />
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
