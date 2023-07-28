@@ -9,6 +9,7 @@ import Contact from './Contact';
 import ParticleEffect from './ParticleEffect';
 import ThemeToggle from './ThemeToggle';
 import { ThemeProvider } from './ThemeProvider';
+import PhotoGallery from './PhotoGallery';
 
 export {
   Hero,
@@ -25,4 +26,5 @@ export {
   ParticleEffect,
   ThemeToggle,
   ThemeProvider,
+  PhotoGallery,
 }

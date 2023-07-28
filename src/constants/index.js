@@ -1,4 +1,11 @@
 import {
+    //Projects
+    rsr1,
+    rsr2,
+    rsr3,
+    rsr4,
+    rsr5,
+
     // Tech
     c,
     cpp,
@@ -49,14 +56,14 @@ export const navLinks = [
         title: "Qualifications"
     },
     {
-        page: "home",
-        id: "contact",
-        title: "Contact",
-    },
-    {
         page: "project",
         id: "project",
         title: "Projects",
+    },
+    {
+        page: "home",
+        id: "contact",
+        title: "Contact",
     },
 ];
 
@@ -180,9 +187,10 @@ const qualifications = [
 
 const projects = [
     {
-        name: "Car Rent",
-        description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        title: "Project Title",
+        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        photos: [rsr1, rsr2, rsr3, rsr4, rsr5],
+        gitLink: "https://github.com/Lunarett",
         tags: [
             {
                 name: "react",
@@ -197,50 +205,26 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: {},
-        source_code_link: "https://github.com/",
     },
     {
-        name: "Job IT",
-        description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        title: "Project Title",
+        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        photos: [rsr1, rsr2, rsr3, rsr4, rsr5],
+        gitLink: "https://github.com/Lunarett",
         tags: [
             {
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "mongodb",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "tailwind",
                 color: "pink-text-gradient",
             },
         ],
-        image: {},
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
-            {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "supabase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: {},
-        source_code_link: "https://github.com/",
     },
 ];
 

@@ -5,6 +5,13 @@ import close from "./icons/close.svg";
 import sun from "./icons/sun.svg";
 import moon from "./icons/moon.svg";
 
+// Projects
+import rsr1 from './projects/rsr/rsr1.png'
+import rsr2 from './projects/rsr/rsr2.png'
+import rsr3 from './projects/rsr/rsr3.png'
+import rsr4 from './projects/rsr/rsr4.png'
+import rsr5 from './projects/rsr/rsr5.png'
+
 // Services
 import uiDesign from "./services/ux-design.png";
 import reactDev from "./services/react.png";
@@ -39,6 +46,13 @@ export {
   close,
   sun,
   moon,
+
+  // Projects
+  rsr1,
+  rsr2,
+  rsr3,
+  rsr4,
+  rsr5,
 
   // Services
   uiDesign,
