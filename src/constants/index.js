@@ -193,7 +193,7 @@ const projects = [
         gitLink: "https://github.com/Lunarett",
         tags: [
             {
-                name: "react",
+                name: "C++",
                 color: "blue-text-gradient",
             },
             {
@@ -207,13 +207,13 @@ const projects = [
         ],
     },
     {
-        title: "Project Title",
+        title: "Game",
         desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         photos: [rsr1, rsr2, rsr3, rsr4, rsr5],
         gitLink: "https://github.com/Lunarett",
         tags: [
             {
-                name: "react",
+                name: "C#",
                 color: "blue-text-gradient",
             },
             {
@@ -221,7 +221,7 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "C",
                 color: "pink-text-gradient",
             },
         ],
