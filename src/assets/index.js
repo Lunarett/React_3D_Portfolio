@@ -6,11 +6,21 @@ import sun from "./icons/sun.svg";
 import moon from "./icons/moon.svg";
 
 // Projects
-import rsr1 from './projects/rsr/rsr1.png'
-import rsr2 from './projects/rsr/rsr2.png'
-import rsr3 from './projects/rsr/rsr3.png'
-import rsr4 from './projects/rsr/rsr4.png'
-import rsr5 from './projects/rsr/rsr5.png'
+import rsr1 from './projects/rsr/rsr1.png';
+import rsr2 from './projects/rsr/rsr2.png';
+import rsr3 from './projects/rsr/rsr3.png';
+import rsr4 from './projects/rsr/rsr4.png';
+import rsr5 from './projects/rsr/rsr5.png';
+
+import hs1 from './projects/hs/hs1.png';
+import hs2 from './projects/hs/hs2.png';
+import hs3 from './projects/hs/hs3.png';
+import hs4 from './projects/hs/hs4.png';
+import hs5 from './projects/hs/hs5.png';
+
+import gen1 from './projects/hgt/gen1.png';
+import gen2 from './projects/hgt/gen2.png';
+import gen3 from './projects/hgt/gen3.png';
 
 // Services
 import uiDesign from "./services/ux-design.png";
@@ -53,6 +63,16 @@ export {
   rsr3,
   rsr4,
   rsr5,
+
+  hs1,
+  hs2,
+  hs3,
+  hs4,
+  hs5,
+
+  gen1,
+  gen2,
+  gen3,
 
   // Services
   uiDesign,

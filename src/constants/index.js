@@ -6,6 +6,16 @@ import {
     rsr4,
     rsr5,
 
+    hs1,
+    hs2,
+    hs3,
+    hs4,
+    hs5,
+
+    gen1,
+    gen2,
+    gen3,
+
     // Tech
     c,
     cpp,
@@ -187,44 +197,25 @@ const qualifications = [
 
 const projects = [
     {
-        title: "Project Title",
+        title: "Ready Set Roll!",
         desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         photos: [rsr1, rsr2, rsr3, rsr4, rsr5],
         gitLink: "https://github.com/Lunarett",
-        tags: [
-            {
-                name: "C++",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
-                color: "green-text-gradient",
-            },
-            {
-                name: "tailwind",
-                color: "pink-text-gradient",
-            },
-        ],
+        tags: ["Unreal Engine", "Blueprints"]
     },
     {
-        title: "Game",
+        title: "Heist Simulator",
         desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-        photos: [rsr1, rsr2, rsr3, rsr4, rsr5],
+        photos: [hs1, hs2, hs3, hs4, hs5],
         gitLink: "https://github.com/Lunarett",
-        tags: [
-            {
-                name: "C#",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
-                color: "green-text-gradient",
-            },
-            {
-                name: "C",
-                color: "pink-text-gradient",
-            },
-        ],
+        tags: ["C#", "Unity", "FMOD"]
+    },
+    {
+        title: "Terrain Generator",
+        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        photos: [gen1, gen2, gen3],
+        gitLink: "https://github.com/Lunarett",
+        tags: ["C#", "XAML", "WPF"]
     },
 ];
 

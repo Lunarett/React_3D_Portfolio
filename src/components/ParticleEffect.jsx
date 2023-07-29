@@ -47,9 +47,10 @@ const ParticleEffect = () => {
                             duration: 0.4,
                         },
                         grab: {
-                            distance: 400,
+                            distance: 200,
                             links: {
-                                blink: false,
+                                color: "#ff002a",
+                                blink: true,
                                 consent: false,
                                 opacity: 1
                             }

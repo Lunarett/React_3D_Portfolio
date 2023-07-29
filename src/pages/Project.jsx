@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { SectionWrapper } from '../hoc';
 import { PhotoGallery } from '../components';
-import { github, rsr1, rsr2, rsr3, rsr4, rsr5 } from '../assets';
 import { styles } from '../styles';
 import { projects } from '../constants';
 
@@ -20,8 +19,8 @@ const ProjectCard = ({ projects, duration }) => {
                     <h3 className={`${styles.sectionSubText}`}>Tags</h3>
                     <div className='flex flex-row'>
                         {projects.tags.map((tag) => (
-                            <div key={tag.name} className='bg-ltc-font-3 rounded-lg pt-1 pb-1 pr-2 pl-2 mr-2'>
-                                {tag.name}
+                            <div key={tag} className='bg-ltc-font-3 rounded-lg pt-1 pb-1 pr-2 pl-2 mr-2'>
+                                {tag}
                             </div>
                         ))}
                     </div>
@@ -49,7 +48,7 @@ const Project = () => {
             : projects.filter(
                 (project) =>
                     project.title.toLowerCase().includes(inputValue.toLowerCase()) ||
-                    project.tags.some((tag) => tag.name.toLowerCase().includes(inputValue.toLowerCase()))
+                    project.tags.some((tag) => tag.toLowerCase().includes(inputValue.toLowerCase()))
             );
 
         setFilteredProjects(filtered);
@@ -64,7 +63,7 @@ const Project = () => {
                 placeholder='Search projects...'
                 value={searchInput}
                 onChange={handleSearchInputChange}
-                className='border border-ltc-font-3 rounded-md p-2 mb-4 w-1/2 mb-5'
+                className='border border-ltc-font-3 rounded-md p-2 w-1/2 mb-5'
             />
 
             {filteredProjects.map((project, index) => (
