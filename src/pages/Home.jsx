@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative bg-hero-pattern bg-cover bg-fixed bg-center">
+            <div className="relative bg-white dark:bg-black bg-cover bg-fixed bg-center">
                 <Hero />
             </div>
 

@@ -52,7 +52,7 @@ const ParticleEffect = () => {
                                 color: "#ff002a",
                                 blink: true,
                                 consent: false,
-                                opacity: 1
+                                opacity: 0.5
                             }
                         }
                     },

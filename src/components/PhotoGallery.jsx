@@ -28,13 +28,15 @@ const PhotoGallery = ({ photos, duration }) => {
   }, [duration]);
 
   return (
-    <div className="relative">
-      <img
-        src={photos[activeIndex]}
-        alt={`Photo ${activeIndex + 1}`}
-        style={{ maxWidth: '100%', height: 'auto' }}
-        className='rounded-t-xl'
-      />
+    <div className="relative rounded-t-xl" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center' }}>
+      <div className="centered-image-container">
+        <img
+          src={photos[activeIndex]}
+          alt={`Photo ${activeIndex + 1}`}
+          style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
+          className='rounded-t-md'
+        />
+      </div>
       <button
         className="absolute top-1/2 transform -translate-y-1/2 left-4 bg-gray-700 p-2 rounded-lg text-white text-2xl"
         onClick={goToPreviousPhoto}

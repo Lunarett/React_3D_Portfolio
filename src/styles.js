@@ -10,17 +10,17 @@ const styles = {
     sectionSubText: "sm:text-[18px] text-[24px] text-ltc-font-2 dark:text-dtc-font-2 uppercase tracking-wider",
 
     // Theme Colors
-    lightThemeColor1: "#fff",
-    lightThemeColor2: "#fff",
-    lightThemeColor3: "#fff",
-    lightThemeColor4: "#fff",
+    lightThemeColor1: "#edf5f7",
+    lightThemeColor2: "#eef3f5",
+    lightThemeColor3: "#d3dfe9",
+    lightThemeColor4: "#e3eaef",
 
-    lightFontColor1: "#000",
+    lightFontColor1: "#2a2d2e",
 
-    darkThemeColor1: "#000",
-    darkThemeColor2: "#000",
-    darkThemeColor3: "#000",
-    darkThemeColor4: "#000",
+    darkThemeColor1: "#061b2d",
+    darkThemeColor2: "#061b2d",
+    darkThemeColor3: "#061B2D",
+    darkThemeColor4: "#092943",
 
     darkFontColor1: "#fff",
 };

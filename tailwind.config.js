@@ -17,11 +17,11 @@ module.exports = {
         "ltc-font-3": "#2281c0",
 
         // Dark Theme Colors
-        "dtc-1": "#1a1e21",
-        "dtc-2": "#464f60",
-        "dtc-3": "#121416",
-        "dtc-4": "#15181c",
-        "dtc-5": "#15181c",
+        "dtc-1": "#061b2d",
+        "dtc-2": "#061b2d",
+        "dtc-3": "#061B2D",
+        "dtc-4": "#092943",
+        "dtc-5": "#012E59",
         "dtc-font-1": "#edf5f7",
         "dtc-font-2": "#edf5f7",
         "dtc-font-3": "#2281c0",

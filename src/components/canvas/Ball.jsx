@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
+import { useInView } from 'react-intersection-observer';
 import {
   Decal,
   Float,
@@ -38,19 +39,27 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  return (
-    <Canvas
-      frameloop='always'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} enablePan={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+  const [inViewRef, inView] = useInView({
+    triggerOnce: true, // Only trigger once
+  });
 
-      <Preload all />
-    </Canvas>
+  return (
+    <div ref={inViewRef}>
+      {inView && (
+        <Canvas
+          frameloop='always'
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls enableZoom={false} enablePan={false} />
+            <Ball imgUrl={icon} />
+          </Suspense>
+
+          <Preload all />
+        </Canvas>
+      )}
+    </div>
   );
 };
 

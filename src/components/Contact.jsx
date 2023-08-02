@@ -33,21 +33,21 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        'service_p485has',
+        'template_gg67ib6',
         {
           from_name: form.name,
           to_name: "Egor Ageev",
           from_email: form.email,
-          to_email: "e.ageev98@proton.me",
+          to_email: "ea.ageev98@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        'HqyIKq_KYqLl6wGl7'
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you for your message. I will respond to you promptly.");
+          alert("Thank you for your message. I will respond to you As soon as possible.");
 
           setForm({
             name: "",
@@ -59,7 +59,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Something went wrong. Please try again.");
         }
       );
   };

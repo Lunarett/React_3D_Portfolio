@@ -22,6 +22,20 @@ import gen1 from './projects/hgt/gen1.png';
 import gen2 from './projects/hgt/gen2.png';
 import gen3 from './projects/hgt/gen3.png';
 
+import ll1 from './projects/little_lemon/little-lemon-1.png';
+import ll2 from './projects/little_lemon/little-lemon-2.png';
+import ll3 from './projects/little_lemon/little-lemon-3.png';
+import ll4 from './projects/little_lemon/little-lemon-4.png';
+import ll5 from './projects/little_lemon/little-lemon-5.png';
+
+import wp1 from './projects/whispurr/wp-1.png';
+import wp2 from './projects/whispurr/wp-2.png';
+
+import r3d1 from './projects/r3d/r3d-1.png';
+
+import dx1 from './projects/dx11/dx11-1.png';
+import dx2 from './projects/dx11/dx11-2.png';
+
 // Services
 import uiDesign from "./services/ux-design.png";
 import reactDev from "./services/react.png";
@@ -48,6 +62,7 @@ import sc_logo from './company/SC_Logo.png';
 import si_logo from './company/SI_Logo.png';
 import ms_logo from "./company/msLogo.jpg";
 import sae_logo from "./company/sae.jpg";
+import bfVid from "./Portfolio.mp4";
 
 export {
   // Icons
@@ -57,22 +72,42 @@ export {
   sun,
   moon,
 
-  // Projects
+  // Ready Set Roll
   rsr1,
   rsr2,
   rsr3,
   rsr4,
   rsr5,
 
+  // Heist Simulator
   hs1,
   hs2,
   hs3,
   hs4,
   hs5,
 
+  // Terrain Gen
   gen1,
   gen2,
   gen3,
+
+  // Little Lemon
+  ll1,
+  ll2,
+  ll3,
+  ll4,
+  ll5,
+
+  // Whispurr
+  wp1,
+  wp2,
+
+  // React 3D Portfolio
+  r3d1,
+
+  // DirectX 11
+  dx1,
+  dx2,
 
   // Services
   uiDesign,
@@ -100,4 +135,5 @@ export {
   si_logo,
   ms_logo,
   sae_logo,
+  bfVid
 };

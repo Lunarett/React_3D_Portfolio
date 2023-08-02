@@ -16,6 +16,20 @@ import {
     gen2,
     gen3,
 
+    ll1,
+    ll2,
+    ll3,
+    ll4,
+    ll5,
+
+    wp1,
+    wp2,
+
+    r3d1,
+
+    dx1,
+    dx2,
+
     // Tech
     c,
     cpp,
@@ -197,11 +211,32 @@ const qualifications = [
 
 const projects = [
     {
+        title: "Little Lemon - Restaurant Website",
+        desc: "Little lemon is a fully responsive website for a restaurant that was made using react. It contains all the usual fields a website for a restaurant might have, such as reservations page, login page, etc.",
+        photos: [ll1, ll2, ll3, ll4, ll5],
+        gitLink: "https://github.com/Lunarett",
+        tags: ["React", "JavaScript", "HTML", "CSS"]
+    },
+    {
+        title: "My 3D Portfolio",
+        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        photos: [r3d1],
+        gitLink: "https://github.com/Lunarett",
+        tags: ["React", "JavaScript", "HTML", "CSS", "Tailwind", "Three.js"]
+    },
+    {
         title: "Ready Set Roll!",
         desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         photos: [rsr1, rsr2, rsr3, rsr4, rsr5],
         gitLink: "https://github.com/Lunarett",
-        tags: ["Unreal Engine", "Blueprints"]
+        tags: ["Unreal Engine", "Blueprints", "C++"]
+    },
+    {
+        title: "Whispurr Messenger",
+        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        photos: [wp1, wp2],
+        gitLink: "https://github.com/Lunarett",
+        tags: ["C#", "Networking", "WPF", "MVVM"]
     },
     {
         title: "Heist Simulator",
@@ -215,7 +250,14 @@ const projects = [
         desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         photos: [gen1, gen2, gen3],
         gitLink: "https://github.com/Lunarett",
-        tags: ["C#", "XAML", "WPF"]
+        tags: ["C#", "XAML", "WPF", "Multi-Threading"]
+    },
+    {
+        title: "DirectX 11 - Object Rednering",
+        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        photos: [dx1, dx2],
+        gitLink: "https://github.com/Lunarett",
+        tags: ["C++", "DirectX", "HLSL"]
     },
 ];
 

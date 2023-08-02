@@ -14,7 +14,7 @@ const ProjectCard = ({ projects, duration }) => {
                 <PhotoGallery photos={projects.photos} duration={duration} />
                 <div className='p-5'>
                     <h1 className={`${styles.sectionHeadText}`}>{projects.title}</h1>
-                    <p className='max-w-3xl leading-[30px] text-justify pb-10'>{projects.desc}</p>
+                    <p className='max-w-3xl leading-[30px] text-justify text-ltc-font-1 dark:text-dtc-font-1 pb-10'>{projects.desc}</p>
 
                     <h3 className={`${styles.sectionSubText}`}>Tags</h3>
                     <div className='flex flex-row'>
@@ -26,7 +26,7 @@ const ProjectCard = ({ projects, duration }) => {
                     </div>
                 </div>
 
-                <button onClick={handleOpenUrl} className='w-full hover:bg-black/50 p-5 mt-10 rounded-b-xl'>
+                <button onClick={handleOpenUrl} className='w-full hover:bg-black/50 p-5 mt-10 rounded-b-xl text-ltc-font-1 dark:text-dtc-font-1'>
                     View Source Code on GitHub
                 </button>
             </div>
@@ -63,7 +63,7 @@ const Project = () => {
                 placeholder='Search projects...'
                 value={searchInput}
                 onChange={handleSearchInputChange}
-                className='border border-ltc-font-3 rounded-md p-2 w-1/2 mb-5'
+                className='rounded-md shadow-md p-2 w-1/2 mb-5 bg-ltc-1 dark:bg-dtc-1'
             />
 
             {filteredProjects.map((project, index) => (
