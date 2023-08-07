@@ -13,20 +13,20 @@ const ProjectCard = ({ projects, duration }) => {
             <div className='bg-ltc-3 dark:bg-dtc-3 rounded-xl'>
                 <PhotoGallery photos={projects.photos} duration={duration} />
                 <div className='p-5'>
-                    <h1 className={`${styles.sectionHeadText}`}>{projects.title}</h1>
-                    <p className='max-w-3xl leading-[30px] text-justify text-ltc-font-1 dark:text-dtc-font-1 pb-10'>{projects.desc}</p>
+                    <h1 className={`${styles.projectHeadText}`}>{projects.title}</h1>
+                    <p className={`${styles.projectParagraphText} pb-10`}>{projects.desc}</p>
 
-                    <h3 className={`${styles.sectionSubText}`}>Tags</h3>
-                    <div className='flex flex-row'>
+                    <h3 className={`${styles.projectSubText}`}>Tags</h3>
+                    <div className='flex flex-row flex-wrap gap-2'>
                         {projects.tags.map((tag) => (
-                            <div key={tag} className='bg-ltc-font-3 rounded-lg pt-1 pb-1 pr-2 pl-2 mr-2'>
-                                {tag}
+                            <div key={tag} className='bg-ltc-font-3 rounded-lg pt-1 pb-1 pr-2 pl-2'>
+                                <p className={`${styles.projectParagraphText} text-white`}>{tag}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <button onClick={handleOpenUrl} className='w-full hover:bg-black/50 p-5 mt-10 rounded-b-xl text-ltc-font-1 dark:text-dtc-font-1'>
+                <button onClick={handleOpenUrl} className='w-full hover:bg-ltc-font-3/20 p-5 mt-10 rounded-b-xl text-ltc-font-1 dark:text-dtc-font-1'>
                     View Source Code on GitHub
                 </button>
             </div>
@@ -63,7 +63,7 @@ const Project = () => {
                 placeholder='Search projects...'
                 value={searchInput}
                 onChange={handleSearchInputChange}
-                className='rounded-md shadow-md p-2 w-1/2 mb-5 bg-ltc-1 dark:bg-dtc-1'
+                className='rounded-md shadow-md p-2 xs:w-3/4 sm:w-1/2 mb-5 bg-white dark:bg-dtc-1'
             />
 
             {filteredProjects.map((project, index) => (

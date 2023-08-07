@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const PhotoGallery = ({ photos, duration }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,9 +32,10 @@ const PhotoGallery = ({ photos, duration }) => {
   return (
     <div className="relative rounded-t-xl" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center' }}>
       <div className="centered-image-container">
-        <img
+        <LazyLoadImage
           src={photos[activeIndex]}
           alt={`Photo ${activeIndex + 1}`}
+          effect="blur"
           style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
           className='rounded-t-md'
         />

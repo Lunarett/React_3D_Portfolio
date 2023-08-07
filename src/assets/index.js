@@ -1,7 +1,4 @@
 // Icons
-import github from "./icons/github.png";
-import menu from "./icons/menu.svg";
-import close from "./icons/close.svg";
 import sun from "./icons/sun.svg";
 import moon from "./icons/moon.svg";
 
@@ -37,9 +34,12 @@ import dx1 from './projects/dx11/dx11-1.png';
 import dx2 from './projects/dx11/dx11-2.png';
 
 // Services
-import uiDesign from "./services/ux-design.png";
-import reactDev from "./services/react.png";
-import gameDev from "./services/game.png";
+import uiDesign from "./services/service_ico_web.svg";
+import reactDev from "./services/service_ico_react.svg";
+import gameDev from "./services/service_ico_games.svg";
+import uiDesignDark from "./services/service_ico_web_dark.svg";
+import reactDevDark from "./services/service_ico_react_dark.svg";
+import gameDevDark from "./services/service_ico_game_dark.svg";
 
 // Tech
 import c from "./tech/c.png";
@@ -60,15 +60,17 @@ import threejs from "./tech/threejs.svg";
 // Experience & Qualification Logos
 import sc_logo from './company/SC_Logo.png';
 import si_logo from './company/SI_Logo.png';
-import ms_logo from "./company/msLogo.jpg";
-import sae_logo from "./company/sae.jpg";
+
+import ms_logo from "./company/ms.svg";
+import sae_logo from "./company/Egor_portfolio_Sae_Institute_Black_Rgb.svg";
+
 import bfVid from "./Portfolio.mp4";
+
+// PDFs
+import resume from './pdfs/Resume_EgorAgeev.pdf';
 
 export {
   // Icons
-  github,
-  menu,
-  close,
   sun,
   moon,
 
@@ -113,6 +115,9 @@ export {
   uiDesign,
   reactDev,
   gameDev,
+  uiDesignDark,
+  reactDevDark,
+  gameDevDark,
 
   // Tech
   c,
@@ -135,5 +140,7 @@ export {
   si_logo,
   ms_logo,
   sae_logo,
-  bfVid
+  bfVid,
+
+  resume,
 };

@@ -20,10 +20,10 @@ const QualificationCard = ({ qualification, theme }) => {
       }}
       contentArrowStyle={{ borderRight: theme === 'dark' ? `7px solid ${styles.darkThemeColor2}` : `7px solid ${styles.lightThemeColor2}` }}
       date={qualification.date}
-      iconStyle={{ background: "#414954", border: theme === 'dark' ? `4px solid ${styles.darkThemeColor2}` : `4px solid ${styles.lightThemeColor2}`, boxShadow: "none" }}
+      iconStyle={{ background: qualification.iconBG, border: theme === 'dark' ? `4px solid ${styles.darkThemeColor2}` : `4px solid ${styles.lightThemeColor2}`, boxShadow: "none", }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
-          <img src={qualification.icon} alt={qualification.name} className="w-[90%] h-[90%] object-contain rounded-3xl" />
+          <img src={qualification.icon} alt={qualification.name} className="w-[80%] h-[80%] object-contain" />
         </div>
       }
       className="vertical-timeline-element--education"

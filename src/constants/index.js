@@ -50,6 +50,9 @@ import {
     uiDesign,
     reactDev,
     gameDev,
+    uiDesignDark,
+    reactDevDark,
+    gameDevDark,
 
     // Experience and Qualification Logos
     sc_logo,
@@ -94,15 +97,18 @@ export const navLinks = [
 const services = [
     {
         title: "Web Designer",
-        icon: uiDesign,
+        iconLight: uiDesign,
+        iconDark: uiDesignDark,
     },
     {
         title: "React.js Developer",
-        icon: reactDev,
+        iconLight: reactDev,
+        iconDark: reactDevDark,
     },
     {
         title: "Game Developer",
-        icon: gameDev,
+        iconLight: gameDev,
+        iconDark: gameDevDark,
     },
 ];
 
@@ -198,65 +204,67 @@ const qualifications = [
         qualification: "Diploma",
         name: "SAE Institute",
         icon: sae_logo,
-        date: "2021 - 2022"
+        iconBG: "#fff",
+        date: "2021 - 2022",
     },
     {
         course: "Audio Engineering",
         qualification: "Bachelors of Arts",
         name: "Middlesex & SAE Institute",
         icon: ms_logo,
-        date: "2016 - 2021"
+        iconBG: "#ff0000",
+        date: "2016 - 2021",
     }
 ]
 
 const projects = [
     {
         title: "Little Lemon - Restaurant Website",
-        desc: "Little lemon is a fully responsive website for a restaurant that was made using react. It contains all the usual fields a website for a restaurant might have, such as reservations page, login page, etc.",
+        desc: "Little Lemon is a fully responsive website for a restaurant that was made using React. It contains all the usual fields a website for a restaurant might have, such as reservations page, login page, etc.",
         photos: [ll1, ll2, ll3, ll4, ll5],
-        gitLink: "https://github.com/Lunarett",
+        gitLink: "https://github.com/Lunarett/little-lemon",
         tags: ["React", "JavaScript", "HTML", "CSS"]
     },
     {
         title: "My 3D Portfolio",
-        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        desc: "A portfolio website that demonstrates all of my skills in frontend development, and working with external libraries such as Three.js and Tailwind CSS.",
         photos: [r3d1],
-        gitLink: "https://github.com/Lunarett",
+        gitLink: "https://github.com/Lunarett/React_3D_Portfolio",
         tags: ["React", "JavaScript", "HTML", "CSS", "Tailwind", "Three.js"]
     },
     {
         title: "Ready Set Roll!",
-        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        desc: "Ready Set Roll is a local multiplayer game that challenges you to race through a colorful toy block world as hamster balls. The game is developed using Unreal Engine 4 and features dynamic physics and interactive obstacles. Your main goal is to stay on the track and reach the finish line before your opponents. Ready Set Roll is a fun and engaging game for all ages.",
         photos: [rsr1, rsr2, rsr3, rsr4, rsr5],
-        gitLink: "https://github.com/Lunarett",
+        gitLink: "https://github.com/Lunarett/-BallGame",
         tags: ["Unreal Engine", "Blueprints", "C++"]
     },
     {
         title: "Whispurr Messenger",
-        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        desc: "This project is a simple messenger application developed in Windows Presentation Forms (WPF) that allows users to connect to a server and chat with each other.",
         photos: [wp1, wp2],
-        gitLink: "https://github.com/Lunarett",
+        gitLink: "https://github.com/Lunarett/Whispurr",
         tags: ["C#", "Networking", "WPF", "MVVM"]
     },
     {
         title: "Heist Simulator",
-        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        desc: "Heist Simulator is a thrilling game developed in Unity, where you have to balance between looting cash and fighting off waves of cops. The game challenges you to survive as long as you can while the police forces become more numerous and tougher. How much money can you make before you get caught?",
         photos: [hs1, hs2, hs3, hs4, hs5],
-        gitLink: "https://github.com/Lunarett",
+        gitLink: "https://github.com/Brombaer/Rob-a-Bank-Simulator",
         tags: ["C#", "Unity", "FMOD"]
     },
     {
         title: "Terrain Generator",
-        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        desc: "Heightmap Generator is a tool for creating heightmaps and textures created using windows presentation forms. It is developed for designers and artists who need to generate realistic terrain for their projects. The tool allows you to adjust various parameters to customize the heightmap. You can also export the heightmap as a .png file or save the project for later editing.",
         photos: [gen1, gen2, gen3],
-        gitLink: "https://github.com/Lunarett",
+        gitLink: "https://github.com/Lunarett/MyTerrainTool",
         tags: ["C#", "XAML", "WPF", "Multi-Threading"]
     },
     {
         title: "DirectX 11 - Object Rednering",
-        desc: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        desc: "A simple program that loads .obj files and renders them using specified shaders.",
         photos: [dx1, dx2],
-        gitLink: "https://github.com/Lunarett",
+        gitLink: "https://github.com/Lunarett/LunarEngine_DX11",
         tags: ["C++", "DirectX", "HLSL"]
     },
 ];

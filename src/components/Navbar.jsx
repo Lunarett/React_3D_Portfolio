@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
-
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { menu, close } from "../assets";
 import ThemeToggle from './ThemeToggle';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -45,7 +44,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-50 backdrop-blur shadow-lg text-ltc-font-1 dark:text-dtc-font-1 ${scrolled ? "bg-ltc-2 dark:bg-dtc-2 " : "bg-ltc-2/40 dark:bg-dtc-2/40"}`}
+      className={`${styles.paddingX} xs:px-0 xs:py-0 w-full flex items-center sm:py-2 fixed top-0 z-50 backdrop-blur shadow-lg text-ltc-font-1 dark:text-dtc-font-1
+      ${scrolled ? "bg-ltc-2 dark:bg-dtc-2 " : "sm:bg-ltc-2/70 sm:dark:bg-dtc-2/70 xs:bg-ltc-2 xs:dark:bg-dtc-2"}`}
     >
       <div className='w-full flex justify-end items-center max-w-7xl mx-auto'>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -63,24 +63,28 @@ const Navbar = () => {
           <ThemeToggle />
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+        <div className='sm:hidden flex flex-1 justify-end items-center p-3'>
+          <FaBars
+            className={`w-[28px] h-[28px] ${toggle ? "hidden" : ""} text-ltc-font-1 dark:text-dtc-font-1`}
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${!toggle ? "hidden" : "flex"
-              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+              } w-full h-screen p-6 relative z-10 items-start flex-col`}
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+            <div className='w-full flex justify-end'>
+              <FaTimes
+                className={`w-[28px] h-[28px] text-ltc-font-1 dark:text-dtc-font-1`}
+                onClick={() => setToggle(!toggle)}
+              />
+            </div>
+
+            <ul className='list-none flex justify-start items-start flex-1 flex-col gap-4 pt-10'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-secondary"
-                    }`}
+                  className={`${styles.navText}`}
                   onClick={() => {
                     setToggle(!toggle);
                     handleLinkClick(nav);
@@ -90,6 +94,13 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Separetor */}
+            <div className="bg-gray-400 h-[1px] w-full"></div>
+
+            <div className='flex items-center justify-center w-full py-4'>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>

@@ -3,11 +3,15 @@ const styles = {
     paddingY: "sm:py-10 py-3",
     padding: "sm:px-16 px-6 sm:py-16 py-20",
 
-    heroHeadText: "lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
-    heroSubText: "lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
+    navText: "font-poppins font-medium cursor-pointer text-[16px]",
 
-    sectionHeadText: "text-ltc-font-2 dark:text-dtc-font-2 font-extralight md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]",
+    projectHeadText: "text-ltc-font-2 dark:text-dtc-font-2 font-extralight xs:text-[25px] sm:text-[40px] py-2",
+    projectSubText: "text-ltc-font-2 dark:text-dtc-font-2 font-extralight xs:text-[25px] sm:text-[35px] py-2 uppercase",
+    projectParagraphText: "max-w-7xl xs:leading-[20px] sm:leading-[30px] text-justify text-ltc-font-1 dark:text-dtc-font-1 xs:text-[12px] sm:text-[18px]",
+
+    sectionHeadText: "text-ltc-font-2 dark:text-dtc-font-2 font-extralight md:text-[50px] sm:text-[40px] xs:text-[40px] text-[30px]",
     sectionSubText: "sm:text-[18px] text-[24px] text-ltc-font-2 dark:text-dtc-font-2 uppercase tracking-wider",
+    sectionParagraphText: "text-[18px] xs:text-[14px] sm:text-[16px] xs:leading-[25px] sm:leading-[30px] text-justify",
 
     // Theme Colors
     lightThemeColor1: "#edf5f7",
